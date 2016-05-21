@@ -10,19 +10,14 @@ public class Remark implements Serializable{
 
 
     private static final long serialVersionUID = 5323841307505810556L;
-    /**
-     * id ,唯一标识一条评论记录
-     */
+
+    /**id ,唯一标识一条评论记录*/
     private int id ;
 
-    /**
-     * 评论用户名称
-     */
+    /**评论用户名称*/
     private String user;
 
-    /**
-     * 评论内容
-     */
+    /**评论内容*/
     private String context;
 
     /** 该评论的关键字 */
@@ -94,6 +89,15 @@ public class Remark implements Serializable{
         this.context = context;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Remark{" +
+                "id=" + id +
+                ", user='" + user + '\'' +
+                ", context='" + context + '\'' +
+                ", keyWords=" + keyWords +
+                ", reply='" + reply + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }

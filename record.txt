@@ -1,0 +1,13 @@
+There are two method to extract keywords.
+First, we can use HanLP.extractKeywords(),second , we can use HanLP.extractPhrases().
+By the way ,as the same remark, different may lead to different result.
+
+For this one :肾宝，资格的正品好药，吃了效果好，这是第二次买这个宝宝了！！！
+extractKeywords():[正品, 效果, 资格, 宝宝, 肾宝]
+extractPhrases():[资格正品] maybe , it seems more like a remark-tag.
+
+For this one : 质量好，服务好，物流快，全五分。。
+extractKeywords(): [物流, 质量, 服务, 全五分]
+extractPhrases(): [] is null .
+
+So , it's better to take extractKeywords() to finish the lexicon.
