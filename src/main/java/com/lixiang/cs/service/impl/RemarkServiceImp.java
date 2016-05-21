@@ -2,7 +2,7 @@ package com.lixiang.cs.service.impl;
 
 
 import com.lixiang.cs.dao.RemarkDAO;
-import com.lixiang.cs.model.remark;
+import com.lixiang.cs.model.Remark;
 import com.lixiang.cs.service.RemarkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class RemarkServiceImp implements RemarkService {
     private RemarkDAO remarkDAO;
 
     @Override
-    public List<remark> selectAll() {
+    public List<Remark> selectAll() {
         return remarkDAO.selectAll();
     }
 }

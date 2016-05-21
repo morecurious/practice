@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by lixiang on 2016/4/24.
  */
-public class remark implements Serializable{
+public class Remark implements Serializable{
 
 
     private static final long serialVersionUID = 5323841307505810556L;
@@ -66,11 +66,11 @@ public class remark implements Serializable{
         this.reply = reply;
     }
 
-    public remark(){
+    public Remark(){
 
     }
 
-    public remark(int id, String user,  String context) {
+    public Remark(int id, String user, String context) {
         this.user = user;
 
         this.context = context;

@@ -1,6 +1,6 @@
 package com.lixiang.cs.dao;
 
-import com.lixiang.cs.model.remark;
+import com.lixiang.cs.model.Remark;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,5 +10,5 @@ import java.util.List;
  */
 @Repository
 public interface RemarkDAO {
-   List<remark> selectAll();
+   List<Remark> selectAll();
 }
