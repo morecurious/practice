@@ -3,8 +3,10 @@ package com.lixiang.cs.controller;
 import com.lixiang.cs.service.RemarkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by lixiang on 2016/5/21.
@@ -18,8 +20,11 @@ public class RemarkController {
 
     @RequestMapping("/brother")
     @ResponseBody
-    public void test(){
+    public ModelAndView test(ModelAndView model){
+
         System.out.println("OK");
+        model.setViewName("index");
+        return model;
     }
 
 }
