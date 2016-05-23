@@ -10,7 +10,7 @@ extractKeywords(): [物流, 质量, 服务, 全五分]
 extractPhrases(): [] is null .
 
 为每个类别设置状态
-0 for logistical（物流） , 1 for quality（质量） ,  2 for service（服务） ,3 for negative remark（差评） ,
-4 for pretty （好评）, 5 for neutral remark（中评） .6 for price（价格）
+0 for logistical（物流）58 , 1 for quality（质量）17 ,  2 for service（服务）14 ,3 for negative remark（差评）5 ,
+4 for pretty （好评）395, 5 for neutral remark（中评）107 .6 for price（价格）3
 
 使用select COUNT(*) from remark where status =0; 来统计各个类别评论的数量
