@@ -6,5 +6,6 @@ package com.lixiang.cs;
 public class funcTest {
     public static void main(String[] args) {
          int a=0 ;
+         int b =0;
     }
 }
