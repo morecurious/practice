@@ -63,10 +63,20 @@ public class ClassifyUtil {
     }
 
 
-
+    /**
+     * calculate logistical ,quality and so on.
+     * @param map
+     */
     public void calProbability(Map<String,Integer> map){
 
         //calculate the sum of the keywords
+        int sum =0;
+
+        List<String> keySet = new ArrayList<>(map.keySet());
+        for (String keyWord : keySet) {
+            sum+=map.get(keyWord);
+        }
+
 
 
     }
