@@ -1,20 +1,16 @@
-There are two method to extract keywords.
-First, we can use HanLP.extractKeywords(),second , we can use HanLP.extractPhrases().
-By the way ,as the same remark, different may lead to different result.
+两个提取关键词的方法：
+HanLP.extractKeywords(), HanLP.extractPhrases().
 
-For this one :肾宝，资格的正品好药，吃了效果好，这是第二次买这个宝宝了！！！
-extractKeywords():[正品, 效果, 资格, 宝宝, 肾宝]
-extractPhrases():[资格正品] maybe , it seems more like a remark-tag.
+评论:肾宝，资格的正品好药，吃了效果好，这是第二次买这个宝宝了！！！
+HanLP.extractKeywords():[正品, 效果, 资格, 宝宝, 肾宝]
+HanLP.extractPhrases():[资格正品] maybe , it seems more like a remark-tag.
 
-For this one : 质量好，服务好，物流快，全五分。。
+评论 : 质量好，服务好，物流快，全五分。。
 extractKeywords(): [物流, 质量, 服务, 全五分]
 extractPhrases(): [] is null .
 
-So , it's better to take extractKeywords() to finish the lexicon.
+为每个类别设置状态
+0 for logistical（物流）58 , 1 for quality（质量）17 ,  2 for service（服务）14 ,3 for negative remark（差评）5 ,
+4 for pretty （好评）395, 5 for neutral remark（中评）107 .6 for price（价格）3
 
-We use the method getKeywords to get the word and calculate the word frequency.
-
-As the construct of the lexicon , we use the field "statue" to tag each class.
-like:
-0 for logistical , 1 for quality ,  2 for service ,3 for negative remark ,
-4 for pretty , 5 for neutral remark .
+使用select COUNT(*) from remark where status =0; 来统计各个类别评论的数量
