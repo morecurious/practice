@@ -11,3 +11,10 @@ extractKeywords(): [物流, 质量, 服务, 全五分]
 extractPhrases(): [] is null .
 
 So , it's better to take extractKeywords() to finish the lexicon.
+
+We use the method getKeywords to get the word and calculate the word frequency.
+
+As the construct of the lexicon , we use the field "statue" to tag each class.
+like:
+0 for logistical , 1 for quality ,  2 for service ,3 for negative remark ,
+4 for pretty , 5 for neutral remark .

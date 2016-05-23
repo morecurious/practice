@@ -36,8 +36,6 @@ public class RemarkController {
 
         Map<String,Integer> wordMap = classifyUtil.getKeywords(Remarks);
 
-
-
         model.setViewName("index");
         return model;
     }

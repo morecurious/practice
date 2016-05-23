@@ -8,6 +8,8 @@ package com.lixiang.cs.util;
 import com.hankcs.hanlp.HanLP;
 import com.lixiang.cs.model.Remark;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -23,6 +25,7 @@ public class ClassifyUtil {
         Map<String, Integer> map = new HashMap<>();
         remarks.forEach(remark -> {
             List<String> keywords = HanLP.extractKeyword(remark.getContext(),20);
+
             keywords.forEach(keyword->{
                 if(map.containsKey(keyword)){
                     int a = map.get(keyword);
@@ -39,9 +42,35 @@ public class ClassifyUtil {
         MyCompare myCompare = new MyCompare(map);
         List<String> keySet = new ArrayList<>(map.keySet());
         Collections.sort(keySet,myCompare);
-        keySet.forEach(keyword-> System.out.println(keyword+" "+map.get(keyword)));
+//      keySet.forEach(keyword-> System.out.println(keyword+" "+map.get(keyword)));
 
+        //output to a file
+//        try {
+//            FileWriter fw = new FileWriter("/home/li/out.txt");
+//            keySet.forEach(keyword->{
+//                try {
+//                    fw.append(keyword+map.get(keyword)+" ");
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            });
+//            fw.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         return map;
     }
+
+
+
+    public void calProbability(Map<String,Integer> map){
+
+        //calculate the sum of the keywords
+
+
+    }
+
+
 }
+
