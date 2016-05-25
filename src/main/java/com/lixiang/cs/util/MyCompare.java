@@ -11,8 +11,12 @@ public class MyCompare implements Comparator<String> {
 
    Map<String,Integer> map = new HashMap<>();
 
+    Map<String,Integer> map_double = new HashMap<>();
     public MyCompare(Map<String, Integer> map) {
         this.map = map;
+    }
+    public MyCompare(Map<String, Double> map_double,int i) {
+        this.map_double = map;
     }
 
     @Override
