@@ -8,7 +8,6 @@ package com.lixiang.cs.util;
 import com.hankcs.hanlp.HanLP;
 import com.lixiang.cs.model.Remark;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.*;
 
