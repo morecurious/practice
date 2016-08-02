@@ -24,7 +24,7 @@ public class ClassifyUtil {
     public List<Double> getKeywords(List<Remark> remarks,String context){
         Map<String, Integer> map = new HashMap<>();
         remarks.forEach(remark -> {
-            List<String> keywords = HanLP.extractKeyword(remark.getContext(),20);
+            List<String> keywords = HanLP.extractKeyword(remark.getContext(),100);
 
             keywords.forEach(keyword->{
                 if(map.containsKey(keyword)){
@@ -37,6 +37,7 @@ public class ClassifyUtil {
             });
         });
 
+        calProbability(map);
 
         //get a desc order
         MyCompare myCompare = new MyCompare(map);
@@ -127,7 +128,7 @@ public class ClassifyUtil {
         for (String keyWord : keySet) {
             sum+=map.get(keyWord);
         }
-
+        System.out.println(sum);
     }
 
 

@@ -20,14 +20,20 @@ public class Remark implements Serializable{
     /**评论内容*/
     private String context;
 
-    /** 该评论的关键字 */
+    /** 在程序中有用，不参与数据库， 该评论的关键字 */
     private List<String> keyWords;
 
     /** 该评论的回复内容 */
     private String reply;
 
-    /** 状态标识，标识这条评论用哪一系列的话术回复，在前台可以供选择*/
+    /** 仅仅对差评有效，状态标识，标识这条评论用哪一系列的话术回复，在前台可以供选择*/
     private int status;
+
+    /**分大类，标识这个评论是好评还是差评 */
+    private int isGood;
+
+
+
 
     public String getUser() {
         return user;
