@@ -9,4 +9,9 @@
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference id="demoService" interface="com.dubbo.demo.DemoService" />
 
+
+
+    <!-- 点对点直连 , 不走注册中心 -->
+   <!-- <dubbo:reference id="xxxService" interface="com.dubbo.demo.testConsumer" url="dubbo://localhost:20890" />-->
+
 </beans>
