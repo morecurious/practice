@@ -10,7 +10,8 @@ import java.util.Date;
 
 public class DemoServiceImp implements DemoService{
     @Override
-    public void say(){
-        System.out.println("hello from provider"+new Date());
+    public String say(){
+
+        return "hello from provider"+new Date();
     }
 }

@@ -12,6 +12,6 @@ public class testConsumer {
 
         DemoService demoService = (DemoService) applicationContext.getBean("demoService");
 
-        demoService.say();
+        System.out.println(demoService.say());
     }
 }

@@ -16,7 +16,7 @@
     <dubbo:application name="demo-provider" />
 
     <!-- zookeeper注册中心 -->
-    <dubbo:registry protocol="zookeeper" address="10.10.110.191:2181" />
+    <dubbo:registry protocol="zookeeper" address="139.129.55.208:2181" />
 
     <dubbo:protocol name="dubbo" port="20880" />
 

@@ -6,7 +6,7 @@
 
     <groupId>com.lixiang</groupId>
     <artifactId>practice-provider</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <parent>
         <groupId>com.lixiang</groupId>
         <artifactId>lixiang-practice</artifactId>
