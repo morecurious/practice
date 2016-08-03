@@ -12,6 +12,8 @@
         <module>practice-model</module>
         <module>practice-admin</module>
         <module>practice-se</module>
+        <module>practice-provider</module>
+        <module>practice-consumer</module>
     </modules>
     <name>cs Maven Webapp</name>
     <url>http://maven.apache.org</url>
@@ -28,7 +30,9 @@
 
 
 
-    <dependencies>
+
+    <dependencyManagement>
+        <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -190,20 +194,8 @@
             <artifactId>commons-collections4</artifactId>
             <version>4.1</version>
         </dependency>
-    </dependencies>
+      </dependencies>
+    </dependencyManagement>
 
-    <build>
-        <finalName>cs</finalName>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
 </project>
