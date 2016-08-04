@@ -1,7 +1,7 @@
 package springAOP;
 
 
-import org.aspectj.lang.ProceedingJoinPoint;
+
 
 /**
  * Created by lixiang on 2016/8/1.
@@ -13,7 +13,7 @@ public class ComponentA {
             System.out.println("before");
         }
 
-        public void around(ProceedingJoinPoint call){
+  /*      public void around(ProceedingJoinPoint call){
             System.out.println("around1");
             try {
                 call.proceed();
@@ -21,7 +21,7 @@ public class ComponentA {
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
             }
-        }
+        }*/
 
 
 

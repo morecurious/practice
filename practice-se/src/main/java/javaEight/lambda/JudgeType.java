@@ -1,5 +1,7 @@
 package javaEight.lambda;
 
+import javaEight.EightUtils;
+
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 
@@ -8,22 +10,7 @@ import java.util.function.Predicate;
  */
 public class JudgeType {
     public static void main(String[] args) {
-
-        Predicate<Integer> Least5 = x->x>5;
-
-        System.out.println(Thread.currentThread().getName());
-        System.out.println(Least5.test(9));
-
-        BinaryOperator<Long> addLongs = (x,y)->x+y;
-
-
-        Runnable runnable = ()->{
-            System.out.println(Thread.currentThread().getName());
-            System.out.println("running");
-        };
-        Thread thread = new Thread(runnable);
-        thread.start();
-        System.out.println();
+        new EightUtils().reduce();
     }
 
 
