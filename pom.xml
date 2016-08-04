@@ -15,7 +15,7 @@
         <module>practice-provider</module>
         <module>practice-consumer</module>
     </modules>
-    <name>cs Maven Webapp</name>
+    <name>practice</name>
     <url>http://maven.apache.org</url>
 
     <properties>
