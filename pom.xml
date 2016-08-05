@@ -21,6 +21,7 @@
     <properties>
         <!-- spring版本号 -->
         <spring.version>4.2.5.RELEASE</spring.version>
+        <lixiang.Spring>5.0.0.BUILD-SNAPSHOT</lixiang.Spring>
         <!-- mybatis版本号 -->
         <mybatis.version>3.2.6</mybatis.version>
         <!-- log4j日志文件管理包版本 -->
@@ -41,6 +42,11 @@
             <scope>test</scope>
         </dependency>
         <!-- spring核心包 -->
+            <dependency>
+                <groupId>com.benlai</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${lixiang.Spring}</version>
+            </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -196,6 +202,5 @@
         </dependency>
       </dependencies>
     </dependencyManagement>
-
 
 </project>
