@@ -8,14 +8,14 @@ import java.util.Scanner;
  */
 public class TongOrder {
 
-    private static TongOrder tongOrder = new TongOrder();
+    private static TongOrder gettongOrder = new TongOrder();
 
     private TongOrder(){
 
     }
 
     public static TongOrder getTong(){
-        return tongOrder;
+        return gettongOrder;
     }
 
     public void getAseOrder(){

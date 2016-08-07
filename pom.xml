@@ -14,6 +14,7 @@
         <module>practice-se</module>
         <module>practice-provider</module>
         <module>practice-consumer</module>
+        <module>practice-prosseor</module>
     </modules>
     <name>practice</name>
     <url>http://maven.apache.org</url>
@@ -34,7 +35,13 @@
 
     <dependencyManagement>
         <dependencies>
-        <dependency>
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>1.6.1</version>
+            </dependency>
+
+            <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
@@ -203,4 +210,17 @@
       </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
