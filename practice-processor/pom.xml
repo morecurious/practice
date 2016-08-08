@@ -19,30 +19,38 @@
         <JAVAC_PATH>${env.JAVA_HOME}/bin/javac</JAVAC_PATH>
         <JAVA_VERSION>1.8</JAVA_VERSION>
         <ENCODING>UTF-8</ENCODING>
-        <COMPILE_PLUGIN_VERSION>3.3</COMPILE_PLUGIN_VERSION>
+        <COMPILE_PLUGIN_VERSION>3.1</COMPILE_PLUGIN_VERSION>
     </properties>
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.lixiang</groupId>
+            <artifactId>practice-annotation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>com.lixiang</groupId>
             <artifactId>BeanGenerator</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>com.lixiang</groupId>
-            <artifactId>practice-annotation</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
         <!-- Auto service annotation processor -->
         <dependency>
             <groupId>com.google.auto.service</groupId>
             <artifactId>auto-service</artifactId>
-            <version>1.0-rc1</version>
+            <version>1.0-rc2</version>
             <optional>true</optional>
         </dependency>
+
+        <!-- Apache Commons StringUtils -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.0</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -53,16 +61,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${COMPILE_PLUGIN_VERSION}</version>
                 <configuration>
-                    <verbose>true</verbose>
-                    <fork>true</fork>
                     <executable>${JAVAC_PATH}</executable>
                     <compilerVersion>${JAVA_VERSION}</compilerVersion>
                     <source>${JAVA_VERSION}</source>
                     <target>${JAVA_VERSION}</target>
                     <encoding>${ENCODING}</encoding>
-                    <compilerArgument>-proc:none</compilerArgument>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

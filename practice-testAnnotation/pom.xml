@@ -23,6 +23,7 @@
             <groupId>com.lixiang</groupId>
             <artifactId>practice-processor</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -39,6 +40,9 @@
                     <source>${JAVA_VERSION}</source>
                     <target>${JAVA_VERSION}</target>
                     <encoding>${ENCODING}</encoding>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
                 </configuration>
             </plugin>
             <plugin>

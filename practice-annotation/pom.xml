@@ -10,23 +10,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>practice-annotation</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
 
 
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5</version>
+                <version>3.1</version>
                 <configuration>
-                    <verbose>true</verbose>
-                    <fork>true</fork>
+
                     <executable>${JAVAC_PATH}</executable>
                     <compilerVersion>${JAVA_VERSION}</compilerVersion>
                     <source>${JAVA_VERSION}</source>
                     <target>${JAVA_VERSION}</target>
                     <encoding>${ENCODING}</encoding>
-                    <compilerArgument>-proc:none</compilerArgument>
+
                 </configuration>
             </plugin>
         </plugins>

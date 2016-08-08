@@ -7,5 +7,8 @@ import com.lixiang.annotation.GoYou;
  */
 @GoYou
 public class testAnno {
+    public static void main(String[] args) {
+        System.out.println("the main class");
+    }
 
 }
