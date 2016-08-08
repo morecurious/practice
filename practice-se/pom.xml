@@ -14,10 +14,12 @@
     <artifactId>practice-se</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+
     <dependencies>
         <dependency>
             <groupId>com.lixiang</groupId>
-            <artifactId>practice-prosseor</artifactId>
+            <artifactId>practice-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -82,21 +84,21 @@
 
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
+                <version>${COMPILE_PLUGIN_VERSION}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <executable>${JAVAC_PATH}</executable>
+                    <compilerVersion>${JAVA_VERSION}</compilerVersion>
+                    <source>${JAVA_VERSION}</source>
+                    <target>${JAVA_VERSION}</target>
+                    <encoding>${ENCODING}</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-
-    
 </project>

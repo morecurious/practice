@@ -14,7 +14,10 @@
         <module>practice-se</module>
         <module>practice-provider</module>
         <module>practice-consumer</module>
-        <module>practice-prosseor</module>
+        <module>practice-processor</module>
+        <module>BeanGenerator</module>
+        <module>practice-annotation</module>
+        <module>practice-testAnnotation</module>
     </modules>
     <name>practice</name>
     <url>http://maven.apache.org</url>
@@ -28,13 +31,29 @@
         <!-- log4j日志文件管理包版本 -->
         <slf4j.version>1.7.7</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
+
+
+        <JAVAC_PATH>${env.JAVA_HOME}/bin/javac</JAVAC_PATH>
+        <JAVA_VERSION>1.8</JAVA_VERSION>
+        <ENCODING>UTF-8</ENCODING>
+        <COMPILE_PLUGIN_VERSION>3.3</COMPILE_PLUGIN_VERSION>
+
     </properties>
 
 
 
 
     <dependencyManagement>
+
+
         <dependencies>
+
+            <dependency>
+                <groupId>com.squareup</groupId>
+                <artifactId>javapoet</artifactId>
+                <version>1.7.0</version>
+            </dependency>
+
             <dependency>
                 <groupId>dom4j</groupId>
                 <artifactId>dom4j</artifactId>
@@ -214,12 +233,28 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
+                <version>${COMPILE_PLUGIN_VERSION}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
