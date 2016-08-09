@@ -9,7 +9,15 @@
                         ">
 
     <import resource="spring-mybatis.xml"/>
-    <import resource="dispatcher-servlet.xml"/>
+
+    <!--freemarker视图解析 -->
+    <import resource="dispatch-servletFreeMarker.xml"/>
+  <!--  <import resource="webflow_freemarker.xml"/>-->
+
+
+    <!--一个JSP视图的解析-->
+    <!-- <import resource="dispatcher-servlet.xml"/>
     <import resource="webflow.xml"/>
+    -->
 
 </beans>
