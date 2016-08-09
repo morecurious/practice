@@ -15,5 +15,5 @@
         <transition on="returnToIndex" to="returnToIndex"/>
     </view-state>
 
-    <end-state id="returnToIndex" view="/index"/>
+    <end-state id="returnToIndex" view="begin"/>
 </flow>

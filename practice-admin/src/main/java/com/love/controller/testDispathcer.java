@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class testDispathcer {
 
 
-    @RequestMapping(value = "/test")
+    @RequestMapping(value = "")
     public ModelAndView testDispathcer(){
 
         System.out.println("hello");

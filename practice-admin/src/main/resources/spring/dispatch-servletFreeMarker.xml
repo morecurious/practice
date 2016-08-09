@@ -47,16 +47,20 @@
     </bean>
 
 
-    <bean id="viewMappings" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<!--    <bean id="viewMappings" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <value>/shopping=flowController</value>
         </property>
         <property name="defaultHandler">
             <bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController"></bean>
         </property>
+    </bean>-->
+    <bean class=
+                  "org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+        <property name="flowRegistry" ref="flowRegistry" />
     </bean>
 
-    <bean id="flowController" class="org.springframework.webflow.mvc.servlet.FlowController">
+    <bean id="flowController" class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
         <property name="flowExecutor" ref="flowExecutor"></property>
     </bean>
 

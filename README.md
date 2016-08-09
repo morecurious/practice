@@ -3,7 +3,7 @@ for study
 
 BeanGenerator 是对JAVAPOET使用的一个DEMO
 
-admin 是一个web应用，使用的是SSM 。
+admin 是一个web应用，使用的是SSM。
 前端可选择用JSP或者Freemarker , 已经在web.xml中选用不同的dispatch-servlet.xml文件。
 两者都可以用webflow。
 现在正在进行： 深入学习webflow
