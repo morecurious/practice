@@ -16,7 +16,7 @@ public class testDispathcer {
 
     @RequestMapping(value = "/test")
     public ModelAndView testDispathcer(){
-        int a =0;
+
         System.out.println("hello");
         return new ModelAndView("begin");
     }

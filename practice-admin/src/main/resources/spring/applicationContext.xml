@@ -12,7 +12,7 @@
 
     <!--freemarker视图解析 -->
     <import resource="dispatch-servletFreeMarker.xml"/>
-  <!--  <import resource="webflow_freemarker.xml"/>-->
+    <import resource="webflow_freemarker.xml"/>
 
 
     <!--一个JSP视图的解析-->
