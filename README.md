@@ -3,7 +3,10 @@ for study
 
 BeanGenerator 是对JAVAPOET使用的一个DEMO
 
-admin 是一个web应用，使用的是SSM ， 其中前端用的是JSP， 现在正在整合FreeMarker。同时含有一个WebFlow DEMO
+admin 是一个web应用，使用的是SSM 。
+前端可选择用JSP或者Freemarker , 已经在web.xml中选用不同的dispatch-servlet.xml文件。
+两者都可以用webflow。
+现在正在进行： 深入学习webflow
 
 practice-provider
 practice-consumer
@@ -17,4 +20,5 @@ practice-testAnnotation
 practice-se
 对java8 和Spring的学习，
 现Spring学习已经转到了Spring源码工程
-现正在尝试将Spring gradle工程转成 maven 工程 ， 然后集成到这个目录下
+现在正在进行：
+将Spring工程从gradle转成maven,并集成到该目录下
