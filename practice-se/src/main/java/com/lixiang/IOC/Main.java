@@ -1,5 +1,6 @@
 package com.lixiang.IOC;
 
+import com.lixiang.model.IOC.PersonBean;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
