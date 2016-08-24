@@ -7,5 +7,6 @@ public class abstractClient {
     public static void main(String[] args) {
         new childAbstract().say();
         new childAbstract().sayHello();
+
     }
 }
