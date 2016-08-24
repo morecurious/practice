@@ -40,7 +40,7 @@
     <mvc:resources mapping="/resource/**" location="/resource/"></mvc:resources>
 
     <bean id="jsonHttpMessageConverter"
-          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+          class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4">
         <property name="supportedMediaTypes">
             <list>
                 <value>application/json</value>
