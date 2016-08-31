@@ -1,15 +1,15 @@
 # practice
 for study
 
-BeanGenerator 是对JAVAPOET使用的一个DEMO
+**BeanGenerator** 是对JAVAPOET使用的一个DEMO
 
-admin 是一个web应用，使用的是SSM。<br>
+**admin** 是一个web应用，使用的是SSM。<br>
 前端可选择用JSP或者Freemarker , 已经在web.xml中选用不同的dispatch-servlet.xml文件。
 两者都可以用webflow。<br>
 现在正在进行： 深入学习webflow
 
-practice-provider<br>
-practice-consumer
+**practice-provider**<br>
+**practice-consumer**
 这两个是DUBBO服务的发布和消费DEMO
 
 practice-annotation<br>

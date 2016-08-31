@@ -17,11 +17,13 @@
 
 
     <dependencies>
+
         <dependency>
             <groupId>com.lixiang</groupId>
             <artifactId>practice-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
@@ -89,6 +91,10 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
         </dependency>
     </dependencies>
     <build>
