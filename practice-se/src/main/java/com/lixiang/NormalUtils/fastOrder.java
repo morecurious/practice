@@ -6,16 +6,7 @@ package com.lixiang.NormalUtils;
 public class fastOrder {
 
     public static void main(String[] args) {
-       //fast();
-        for (int i = 0; i < 5; i++) {
-            System.out.println(i+"a");
-            for (int j = 0; j < 5; j++) {
-                System.out.println(j+"j");
-                if(j==3){
-                    break;
-                }
-            }
-        }
+        fast();
     }
 
 
@@ -32,16 +23,57 @@ public class fastOrder {
             nums[i]=(int)(Math.random()*100);
         }
 
+        int i=0;
+        int j =length-1;
+        System.out.println("sentry is "+nums[sentry]);
         //开始左右循环
-        for (int i = 0; i < length; i++) {
-            for (int j = length-1; j >= 0; j--) {
+        while(true){
+
+            //先从右边开始
+            for ( ; j >= 0; j--) {
+                if(i==j){
+                    break;
+                }
+
                 //如果右边的数比哨兵小
                 if(nums[j]<nums[sentry]){
                     stop=j;
-                    continue;
+                    break;
                 }
+
+            }
+
+            //再从左边开始
+            for (; i < length; i++) {
+                if(i==j){
+                    break;
+                }
+
+                if(nums[i]>nums[sentry]){
+                    //如果左边的数比哨兵大,与上面的stop交换位置
+                    int temp =nums[stop];
+                    nums[stop] = nums[i];
+                    nums[i]=temp;
+                    break;
+                }
+
+            }
+            //左右相遇，将哨兵和相遇位置交换
+            if(i==j){
+                int temp;
+                temp=nums[sentry];
+                nums[sentry]=nums[i];
+                nums[i]=temp;
+                break;
             }
         }
+
+        for (int k = 0; k < length; k++) {
+            System.out.println(nums[k]);
+        }
+
+
+
 
     }
 
