@@ -4,20 +4,57 @@ import com.alibaba.fastjson.JSON;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+
+import static java.lang.String.valueOf;
 
 /**
  * Created by lixiang on 2016/8/13.
  */
 public class StringUtils {
     public static void main(String[] args) {
-        int error= 33;
-        String message ="这是一些子东西";
-        Map map = new HashMap<>();
-        map.put("error",error);
-        map.put("message",message);
-        String json = JSON.toJSONString(map);
-        System.out.println(json);
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
 
+        for(int i=0;i<t;i++)
+        {
+
+            try
+            {
+                long x=sc.nextLong();
+                System.out.println(x+" can be fitted in:");
+                if(x>=-128 && x<=127){
+                    System.out.println("* byte");
+                }
+                //Complete the code
+            }
+            catch(Exception e)
+            {
+                System.out.println(sc.next()+" can't be fitted anywhere.");
+            }
+
+        }
+
+    }
+
+    public void format(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("================================");
+        for(int i=0;i<3;i++)
+        {
+            String s1=sc.next();
+            int x=sc.nextInt();
+            String num = String.format("%03d",x );
+            int length = s1.length();
+            System.out.print(s1);
+            for (int j = 0; j < 15 - length; j++) {
+                System.out.print(" ");
+            }
+            System.out.print(num);
+            System.out.println();
+            //Complete this line
+        }
+        System.out.println("================================");
     }
 
     public String insert(){
