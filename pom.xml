@@ -18,6 +18,7 @@
         <module>BeanGenerator</module>
         <module>practice-annotation</module>
         <module>practice-testAnnotation</module>
+        <module>practice-studyAspectJ</module>
     </modules>
     <name>practice</name>
     <url>http://maven.apache.org</url>
