@@ -5,9 +5,13 @@ package com.lixiang.aspectj.studyCflow;
  */
 public aspect CFlow {
 
-    pointcut setMethod(): call(* set*(..));
+    pointcut setMethod(int x): call(* set*(..))&&args(x);
 
-    before():setMethod(){
+  //  pointcut testFlow(int x):cflow(setMethod(int x));
+
+    before(int x):setMethod(x){
+        System.out.println("in before:"+x);
+
         System.out.println("enter: "+thisJoinPoint.getSourceLocation());
     }
 }

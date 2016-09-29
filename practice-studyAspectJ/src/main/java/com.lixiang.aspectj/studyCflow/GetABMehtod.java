@@ -7,7 +7,7 @@ public class GetABMehtod {
     public void getAB(){
         AMethod a = new AMethod();
         BMethod b = new BMethod();
-        a.setA();
+        a.setA(3);
         b.setB();
     }
 }

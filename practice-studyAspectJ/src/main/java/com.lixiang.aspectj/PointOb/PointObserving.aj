@@ -1,6 +1,8 @@
 package com.lixiang.aspectj.PointOb;
 
-import sun.awt.X11.Screen;
+
+
+import javafx.stage.Screen;
 
 import java.util.Iterator;
 import java.util.Vector;
@@ -11,11 +13,11 @@ import java.util.Vector;
 public aspect PointObserving {
     private Vector Point.observers = new Vector();
 
-    public static void addObserver(Point p, Screen s){
+    public static void addObserver(Point p, ScreenObserver s){
         p.observers.add(s);
     }
 
-    public static void removeObserver(Point p, Screen s ){
+    public static void removeObserver(Point p, ScreenObserver s ){
         p.observers.remove(s);
     }
 
@@ -25,12 +27,12 @@ public aspect PointObserving {
         System.out.println("cccccccc");
         Iterator iterator = p.observers.iterator();
         while (iterator.hasNext()){
-            updateObserver(p,(Screen)iterator.next());
+            updateObserver(p,(ScreenObserver)iterator.next());
             System.out.println("bbbbbbb");
         }
     }
 
-    static void updateObserver(Point p , Screen s){
+    static void updateObserver(Point p , ScreenObserver s){
         System.out.println("aaaaa");
     }
 
