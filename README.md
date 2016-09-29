@@ -1,5 +1,4 @@
-# practice
-for study
+# practice for study
 
 **BeanGenerator** 是对JAVAPOET使用的一个DEMO
 
@@ -22,3 +21,6 @@ practice-se<br>
 现Spring学习已经转到了Spring源码工程<br>
 现在正在进行：<br>
 将Spring工程从gradle转成maven,并集成到该目录下
+
+**practive-studyAspectJ**<br>
+是对aspectJ的学习和一些demo小例

@@ -5,12 +5,16 @@ package com.lixiang.aspectj.studyCflow;
  */
 public aspect CFlow {
 
-    pointcut setMethod(int x): call(* set*(..))&&args(x);
+    pointcut setMethod(): call(* set*(..));
+
+    pointcut inGetABMethod(): withincode(* com.lixiang.aspectj.studyCflow.GetABMehtod.*(..));
 
   //  pointcut testFlow(int x):cflow(setMethod(int x));
 
-    before(int x):setMethod(x){
-        System.out.println("in before:"+x);
+    declare error: setMethod() && !inGetABMethod():"illegal call";
+
+    before():setMethod(){
+        System.out.println("in before:");
 
         System.out.println("enter: "+thisJoinPoint.getSourceLocation());
     }
