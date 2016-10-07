@@ -96,6 +96,12 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.icegreen</groupId>
+            <artifactId>greenmail</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

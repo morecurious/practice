@@ -227,7 +227,14 @@
             <artifactId>commons-collections4</artifactId>
             <version>4.1</version>
         </dependency>
-      </dependencies>
+            <!--发送邮件的jar-->
+        <dependency>
+            <groupId>com.icegreen</groupId>
+            <artifactId>greenmail</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+
+        </dependencies>
     </dependencyManagement>
 
     <build>
