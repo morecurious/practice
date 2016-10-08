@@ -7,6 +7,7 @@ import java.util.List;
  * Created by lixiang on 16-9-28.
  */
 public class HeapOOM {
+
     static class OOMObject{
 
     }

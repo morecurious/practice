@@ -6,7 +6,7 @@ package com.lixiang.cglib;
 public class testCglib {
     public static void main(String[] args) {
         BookFacadeProxy cglib = new BookFacadeProxy();
-        BookFacadeImpl1 bookCglib = (BookFacadeImpl1)cglib.getInstance(new BookFacadeImpl1());
+        BookFacadeImpl bookCglib = (BookFacadeImpl)cglib.getInstance(new BookFacadeImpl());
         bookCglib.addBook();
     }
 }
