@@ -8,5 +8,7 @@ public class testCglib {
         BookFacadeProxy cglib = new BookFacadeProxy();
         BookFacadeImpl bookCglib = (BookFacadeImpl)cglib.getInstance(new BookFacadeImpl());
         bookCglib.addBook();
+        Thread.getAllStackTraces().keySet();
+
     }
 }
