@@ -11,7 +11,7 @@ public class PointClient {
         Point p = new Point();
         ScreenObserver so = new ScreenObserver();
         addObserver(p,so);
-        p.setLocation(3,4);
+//        p.setLocation(3,4);
         System.out.println(p);
     }
 }

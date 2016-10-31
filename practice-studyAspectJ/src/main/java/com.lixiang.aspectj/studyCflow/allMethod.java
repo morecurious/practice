@@ -7,8 +7,8 @@ public class allMethod {
     public static void main(String[] args) {
         AMethod a = new AMethod();
         BMethod b = new BMethod();
-        a.setA(3);
-        b.setB();
+    //    a.setA(3);
+//        b.setB();
         GetABMehtod g = new GetABMehtod();
         g.getAB();
     }

@@ -12,6 +12,6 @@
 
 
     <!-- 点对点直连 , 不走注册中心 -->
-   <!-- <dubbo:reference id="xxxService" interface="com.dubbo.demo.testConsumer" url="dubbo://localhost:20890" />-->
+   <!-- <dubbo:reference id="xxxService" studyinterface="com.dubbo.demo.testConsumer" url="dubbo://localhost:20890" />-->
 
 </beans>
