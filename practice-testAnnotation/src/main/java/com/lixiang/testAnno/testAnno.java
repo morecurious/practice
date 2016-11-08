@@ -1,5 +1,6 @@
 package com.lixiang.testAnno;
 
+import com.lixiang.annotation.FieldTran;
 import com.lixiang.annotation.GoYou;
 
 /**
