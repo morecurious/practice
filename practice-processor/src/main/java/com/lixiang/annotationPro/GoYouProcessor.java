@@ -1,7 +1,5 @@
 package com.lixiang.annotationPro;
 
-import com.google.auto.service.AutoService;
-import com.lixiang.annotation.GoYou;
 import com.lixiang.main.testJavaPoet;
 
 import javax.annotation.processing.*;
@@ -20,7 +18,6 @@ import java.util.Set;
  * Created by lixiang on 2016/8/6.
  */
 
-@AutoService(Processor.class)
 public class GoYouProcessor extends AbstractProcessor {
 
 
@@ -51,6 +48,11 @@ public class GoYouProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
 
+        for (TypeElement te : annotations) {
+            for (Element e : roundEnv.getElementsAnnotatedWith(te)) {
+                messager.printMessage(Diagnostic.Kind.NOTE, "Printing: " + e.toString());
+            }
+        }
         for(Element annotatedElement :roundEnv.getElementsAnnotatedWith(GoYou.class)){
 
             if(annotatedElement.getKind()== ElementKind.CLASS){

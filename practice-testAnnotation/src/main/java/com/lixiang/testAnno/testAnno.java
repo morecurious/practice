@@ -1,7 +1,7 @@
 package com.lixiang.testAnno;
 
-import com.lixiang.annotation.FieldTran;
-import com.lixiang.annotation.GoYou;
+
+import com.lixiang.annotationPro.GoYou;
 
 /**
  * Created by lixiang on 2016/8/8.

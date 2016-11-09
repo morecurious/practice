@@ -1,4 +1,4 @@
-package com.lixiang.annotation;
+package com.lixiang.annotationPro;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

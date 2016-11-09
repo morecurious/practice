@@ -14,15 +14,15 @@
 
 
     <dependencies>
-        <dependency>
-            <groupId>com.lixiang</groupId>
-            <artifactId>practice-annotation</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.lixiang</groupId>-->
+            <!--<artifactId>practice-annotation</artifactId>-->
+            <!--<version>0.0.2-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.lixiang</groupId>
             <artifactId>practice-processor</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.2-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
@@ -41,18 +41,18 @@
                     <target>${JAVA_VERSION}</target>
                     <encoding>${ENCODING}</encoding>
                     <compilerArgument>-Xlint:all</compilerArgument>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
+                    <!--<showWarnings>true</showWarnings>-->
+                    <!--<showDeprecation>true</showDeprecation>-->
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <configuration>
-                    <mainClass>com.lixiang.testAnno.testAnno</mainClass>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>exec-maven-plugin</artifactId>-->
+                <!--<version>1.2.1</version>-->
+                <!--<configuration>-->
+                    <!--<mainClass>com.lixiang.testAnno.testAnno</mainClass>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
