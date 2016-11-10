@@ -23,6 +23,7 @@
             <groupId>com.lixiang</groupId>
             <artifactId>practice-processor</artifactId>
             <version>0.0.2-SNAPSHOT</version>
+             <!--如果有项目依赖于practice-testAnnotation,则不会引入该依赖-->
             <optional>true</optional>
         </dependency>
     </dependencies>
@@ -35,11 +36,12 @@
                 <configuration>
                     <verbose>true</verbose>
                     <fork>true</fork>
-                    <executable>${JAVAC_PATH}</executable>
+                    <!--<executable>${JAVAC_PATH}</executable>-->
                     <compilerVersion>${JAVA_VERSION}</compilerVersion>
                     <source>${JAVA_VERSION}</source>
                     <target>${JAVA_VERSION}</target>
                     <encoding>${ENCODING}</encoding>
+                    <!--编译时开启警告-->
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <!--<showWarnings>true</showWarnings>-->
                     <!--<showDeprecation>true</showDeprecation>-->

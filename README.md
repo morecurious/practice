@@ -15,7 +15,8 @@ practice-annotation<br>
 practice-processor<br>
 practice-testAnnotation<br>
 这三个模块是注解处理器的DEMO
-在使用时，Processor直接进行打包，testAnnotation则进行Compile. <br>
+在使用时，现在将注解和Processor进行了合并，
+Processor直接进行打包，testAnnotation则进行Compile. <br>
 然后就可以看到处理器里面的内容进行了执行
 
 practice-se<br>

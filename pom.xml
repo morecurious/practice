@@ -34,7 +34,7 @@
         <log4j.version>1.2.17</log4j.version>
 
 
-        <JAVAC_PATH>/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/bin/javac</JAVAC_PATH>
+        <JAVAC_PATH>${env.JAVA_HOME}/bin/javac</JAVAC_PATH>
         <JAVA_VERSION>1.8</JAVA_VERSION>
         <ENCODING>UTF-8</ENCODING>
         <COMPILE_PLUGIN_VERSION>3.1</COMPILE_PLUGIN_VERSION>
