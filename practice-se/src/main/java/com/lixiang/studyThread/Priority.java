@@ -15,8 +15,8 @@ public class Priority {
 
     public static void main(String[] args) throws InterruptedException {
         List<job> jobs = new ArrayList<>();
+        // Set Priority for each thread
         for (int i = 0; i < 10; i++) {
-
             int priority =i<5?Thread.MIN_PRIORITY:Thread.MAX_PRIORITY;
             job jjob = new job(priority);
             jobs.add(jjob);
@@ -36,6 +36,7 @@ public class Priority {
 
     }
 
+    //静态内部类来实现线程的相关操作
     static class job implements Runnable{
         private int priority;
         private long count;
@@ -43,7 +44,7 @@ public class Priority {
         public job(int priority) {
             this.priority=priority;
         }
-
+        //如果还没开始，则不进行计数，如果还没有结束，则计数，并当前线程释放处理器资源
         @Override
         public void run() {
             while (notStart){

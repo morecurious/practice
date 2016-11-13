@@ -61,6 +61,7 @@ public class GoYouProcessor extends AbstractProcessor {
                 classElement.getQualifiedName());
 
             }
+            
             new testJavaPoet().generateHelloWorld();
            /* com.lixiang.annotation.GoYou goYou  = annotatedElement.getAnnotation(com.lixiang.annotation.GoYou.class);
             String message = "annotation found in " + annotatedElement.getSimpleName();
