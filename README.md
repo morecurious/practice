@@ -22,6 +22,8 @@ Processor直接进行打包，testAnnotation则进行Compile. <br>
 practice-se<br>
 对java8 和Spring的学习，<br>
 现Spring学习已经转到了Spring源码工程<br>
+在se下面有一些对poi学习的demo。想用poi操作word，有点心有余力不足<br>
+
 现在正在进行：<br>
 将Spring工程从gradle转成maven,并集成到该目录下
 
