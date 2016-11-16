@@ -6,6 +6,6 @@ package com.lixiang.aspectj.withinandtar;
 public class Client {
 
     public static void main(String[] args) {
-        new sky().stage();
+        new sky().stage("aaa",3);
     }
 }

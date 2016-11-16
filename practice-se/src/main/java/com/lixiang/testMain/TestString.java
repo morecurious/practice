@@ -2,7 +2,9 @@ package com.lixiang.testMain;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,6 +17,11 @@ public class TestString {
         map.put("b","b");
         map.put("a","a");
         map.put("a","c");
-        System.out.println(map);
+        System.out.println(map.toString());
+
+        List<String> list = new ArrayList();
+        list.add("aaa");
+        list.add("bbb");
+        System.out.println(list.toString());
     }
 }
