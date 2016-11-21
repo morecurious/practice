@@ -14,9 +14,9 @@ public class WaitNotify {
     public static void main(String[] args) throws InterruptedException {
         Thread waitThread = new Thread(new Wait(),"WaitThread");
         waitThread.start();
-        TimeUnit.SECONDS.sleep(1);
+        /*TimeUnit.SECONDS.sleep(1);
         Thread notifyThread = new Thread(new Notify(),"NotifyThread");
-        notifyThread.start();
+        notifyThread.start();*/
 
     }
 
@@ -24,13 +24,17 @@ public class WaitNotify {
 
         @Override
         public void run() {
+            System.out.println("before lock");
             synchronized (lock){
+                System.out.println("after lock");
                 while (flag){
+                    System.out.println("in the while");
                     try {
                         System.out.println(Thread.currentThread()
                         +" flag is true. Wait @ "+
                         new SimpleDateFormat("HH:mm:ss").format(new Date()));
-                        lock.wait();
+                        lock.wait(1000);
+                        System.out.println("after wait");
                     }catch (Exception e){
 
                     }

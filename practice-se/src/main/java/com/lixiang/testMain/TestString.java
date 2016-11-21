@@ -12,16 +12,21 @@ import java.util.Map;
  */
 public class TestString {
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>();
-        map.put("a","a");
-        map.put("b","b");
-        map.put("a","a");
-        map.put("a","c");
-        System.out.println(map.toString());
 
-        List<String> list = new ArrayList();
-        list.add("aaa");
-        list.add("bbb");
-        System.out.println(list.toString());
+        String a = "aaaaa";
+
+        System.out.println(insertIntoString(1,a,"b"));
+    }
+    public static void captialFirstTwo(String orignStr){
+        StringBuffer stringBuffer = new StringBuffer(orignStr);
+
+    }
+
+    public static String insertIntoString(int index,String orignStr,String newStr){
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(orignStr.substring(0,index));
+        stringBuffer.append(newStr);
+        stringBuffer.append(orignStr.substring(index));
+        return stringBuffer.toString();
     }
 }
