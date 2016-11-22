@@ -11,15 +11,25 @@ import java.util.Map;
  * Created by lixiang on 10/21/2016.
  */
 public class TestString {
+    private static String name ;
+    private static Map<String,String> map = new HashMap<>();
+    static{
+        doInit();
+    }
     public static void main(String[] args) {
-
-        String a = "aaaaa";
-
-        System.out.println(insertIntoString(1,a,"b"));
+        if(name==null){
+            System.out.println("nullnull");
+        }
+        name="bbbb"+name+"cccc";
+        System.out.println(name);
     }
     public static void captialFirstTwo(String orignStr){
         StringBuffer stringBuffer = new StringBuffer(orignStr);
 
+    }
+
+    public static void doInit(){
+      //  name =map.get("ccc");
     }
 
     public static String insertIntoString(int index,String orignStr,String newStr){
