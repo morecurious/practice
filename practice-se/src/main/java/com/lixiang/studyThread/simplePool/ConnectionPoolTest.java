@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ConnectionPoolTest {
     static ConnectionPool pool = new ConnectionPool(10);
+    //计数器
     static CountDownLatch start = new CountDownLatch(1);
     static CountDownLatch end;
 
@@ -24,6 +25,7 @@ public class ConnectionPoolTest {
             thread.start();
         }
         start.countDown();
+        //阻塞当前线程一直到计数器计数为零
         end.await();
         System.out.println("total invoke: "+(threadCount*count));
         System.out.println("got Connection: "+got);
@@ -46,6 +48,7 @@ public class ConnectionPoolTest {
         @Override
         public void run() {
             try {
+                //先阻塞当前线程，全部创建好之后，再一起运行
                 start.await();
             } catch (InterruptedException e) {
 
