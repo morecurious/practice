@@ -17,11 +17,14 @@ public class TestString {
         doInit();
     }
     public static void main(String[] args) {
-        if(name==null){
-            System.out.println("nullnull");
-        }
-        name="bbbb"+name+"cccc";
-        System.out.println(name);
+
+
+
+        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map2 = new HashMap<>();
+        map.put("aaa",null);
+        map2.putAll(null);
+        System.out.println(map.size());
     }
     public static void captialFirstTwo(String orignStr){
         StringBuffer stringBuffer = new StringBuffer(orignStr);
